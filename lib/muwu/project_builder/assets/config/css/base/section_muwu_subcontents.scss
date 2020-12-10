@@ -1,0 +1,58 @@
+body >div.subcontents {
+  margin: ($muwu-root-line-height * 4) 0;
+  >h1 {
+    font-size: ($muwu-root-font-size * 1.75);
+    margin: 0 0 ($muwu-root-line-height * 2) 0;
+    text-align: left;
+  }
+  .compiler_warning {
+    background-color: #ffa;
+    td {
+      a {
+        color: #A00;
+      }
+    }
+  }
+  >table {
+    border-collapse: collapse;
+    tr {
+      td {
+        vertical-align: top;
+        padding: 0.3rem 0.4rem;
+        table {
+          border-collapse: collapse;
+          margin-top: 0.2rem;
+          margin-bottom: -0.2rem;
+        }
+      }
+      td:first-child {
+        padding-left: 0rem;
+      }
+      td:last-child {
+        padding-right: 0rem;
+      }
+      td.heading {
+        text-align: left;
+      }
+      td.number {
+        text-align: right;
+      }
+    }
+  }
+  >ol {
+    list-style-type: none;
+    display: block;
+    margin: 0rem 0.5rem;
+    li {
+      margin: ($muwu-root-line-height * 0.5) 0rem;
+      a {
+        display: inline;
+      }
+      ol {
+        list-style-type: none;
+        display: block;
+        margin: 0rem 1.5rem;
+      }
+    }
+  }
+}

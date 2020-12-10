@@ -1,0 +1,26 @@
+- muwu sync (pull/push) [options]
+  - Synchronize the project from/to a remote location using rsync. Rsync must
+    be installed on the local system.
+
+- muwu sync pull
+  - Use rsync to download the project from a remote host.
+
+- muwu sync push
+  - Use rsync to upload the project to a remote host.
+
+- [options]
+  - Muwu will pass any further command-line arguments to rsync. See the rsync
+    man page for more information about valid rsync options.
+
+  - Other useful options: (verify against the rsync man page before using)
+      --delete    Delete files from the target host that aren't present on the
+                    source host.
+      --dry-run   Show which changes would be made, but don't perform them.
+      --update    Only update the files on the target host that have older
+                    timestamps than on the source; do not change files on the
+                    target host that have newer timestamps.
+
+* [options] for rsync can also be specified in 'options.yml' using the
+  'rsync_options' value.
+
+* Specify the remote host in 'options.yml' using the 'remote_sync' value.

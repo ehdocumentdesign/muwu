@@ -1,0 +1,8 @@
+- muwu new
+  - Create a new project as a subdirectory from the current working directory.
+    Muwu will ask for a directory name. If the directory does not exist, Muwu
+    will create it and fill it with a blank new project.
+  
+* Only alphanumeric (a-z, A-Z, 0-9) and underscore (_) characters are allowed
+  in the directory name.
+  

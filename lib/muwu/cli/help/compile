@@ -1,0 +1,22 @@
+- muwu compile
+  - Compile all parts of the the project located in the current working
+    directory.
+
+- muwu compile css
+  - Compile only the stylesheet for the project.
+
+- muwu compile html
+  - Compile only the html file(s) for the project.
+
+- muwu compile html [index]
+  - Compile only a single outlined content document, indicated by
+    [index]. Use the command `muwu inspect` to determine the index
+    number of a document.
+
+- muwu compile js
+  - Compile only the Javascript library (if applicable) for the project.
+
+* Compiling a project will overwrite any previous output files without
+  any warning.
+
+* Specify output filenames in `options.yml`.

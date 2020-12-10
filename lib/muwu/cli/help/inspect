@@ -1,0 +1,7 @@
+- muwu inspect
+  - Inspect the project in the current working directory, and show details
+    about the project, the project outline, and the project manifest (the list
+    of documents that would be produced by the command `muwu compile`.)
+  
+* Inspecting a project does not create or overwrite any files.
+  

@@ -1,0 +1,12 @@
+body >div.navigator {
+  margin: ($muwu-root-line-height * 0.5) 0;
+  nav.document_links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    a.document_link {
+      font-size: ($muwu-root-font-size * 0.8);
+      padding: ($muwu-root-line-height * 0.5);
+    }
+  }
+}

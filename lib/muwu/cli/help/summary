@@ -1,0 +1,16 @@
+"muwu – Because sometimes WYSIWYG is not WYW."
+
+Command line:
+  muwu compile          compile a project into an HTML document suite
+  muwu concat           combine all source text into a single .md file
+  muwu help             show this message
+  muwu inspect          inspect a project
+  muwu new              create a new project directory
+  muwu publish          publish to a remote server (requires rsync)
+  muwu reset compiled   reset the `compiled/` subdirectory
+  muwu reset css        reset the default CSS files
+  muwu sync             synchronize from/to a remote location (requires rsync)
+  muwu view             view a compiled project (requires lynx)
+
+For more detailed instructions:
+  muwu help [command]

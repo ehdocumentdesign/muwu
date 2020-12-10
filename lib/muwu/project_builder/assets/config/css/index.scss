@@ -1,0 +1,19 @@
+// Muwu CSS Manifest
+// Only modify this file *IF* you know how to change it back.
+
+
+@import 'base/index';
+
+
+// The best way to modify the color theme:
+//   1. Put your files in the `colors` folder
+//   2. Modify the `@import [filename]` command in `colors/index.scss`
+@import 'colors/index';
+
+
+
+// The best way to include your own stylesheets:
+//   1. Put your stylesheets in the `extensions` folder
+//   2. Add an `@import [filename]` command in `extension/index.scss`
+//   3. Remove the `//` comment indicator from the next line
+// @import 'extensions/index';

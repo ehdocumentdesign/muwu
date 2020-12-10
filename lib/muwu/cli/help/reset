@@ -1,0 +1,17 @@
+- muwu reset compiled
+  - Clear the entire contentes of the `compiled/` folder.
+
+- muwu reset css
+  - Reset the `config/css` folder. The following files and folders will
+    revert to their original state:
+
+    - config/css/base/
+    - config/css/colors/dark.scss
+    - config/css/colors/index.scss
+    - config/css/colors/light.scss
+    - config/css/index.scss
+
+  * If `config/css/extensions` does exist, it and its contents will remain
+    unchanged.
+
+  * If `config/css/extensions` does not exist, Muwu will create it.

@@ -1,0 +1,15 @@
+body >div.metadata {
+  margin: ($muwu-root-line-height * 4) 0;
+  dl {
+    div {
+      margin: $muwu-root-line-height 0;
+      dt {
+        font-weight: bold;
+        display: block;
+      }
+      dd {
+        display: block;
+      }
+    }
+  }
+}

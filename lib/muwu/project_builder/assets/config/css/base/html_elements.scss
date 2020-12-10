@@ -1,0 +1,142 @@
+//
+// Default HTML rendering inherits pre-determined style settings, which are
+// not always consistent across web browsers. The following CSS declarations
+// let us build up our stylesheet from scratch more predictably.
+//
+// In defense of `content-box`:
+//
+// Many popular style frameworks insist on `padding-box`, representing a
+// print-media mindset. In print, the media is a fixed size, the content is
+// filled from the outside inwards, and the layout editor can make decisions
+// knowing the result. However, the web browser has a variable media size, the
+// content is filled from the inside outwards, and the layout editor is better
+// off making as few assumptions as possible about how a viewer will size the
+// final product. When we superimpose the `padding-box` mindset from print
+// media, the resulting documents are less likely to adapt to the viewport
+// size, and less likely to zoom properly (the padding size would remain
+// proportional, while the content box could shrink). An HTML document with
+// adequately-defined heirarchial organization has no need for `padding-box`
+// sizing, and a layout editor working with a mindset of variable-size media
+// can successfully rely on `content-box` sizing.
+//
+
+$muwu-root-font-size: 1rem;
+$muwu-root-line-height: ($muwu-root-font-size * 1.16667);
+
+* {
+  box-sizing: content-box;
+  font-size: $muwu-root-font-size;
+  line-height: $muwu-root-line-height;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+
+html {
+  width: 100%;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
+}
+
+blockquote {
+  margin: $muwu-root-line-height 2rem;
+}
+
+code {
+  font-size: $muwu-root-font-size;
+  padding: 0rem 0.15rem;
+}
+
+dl {
+  margin: $muwu-root-line-height 0;
+  div {
+    dt {
+      display: list-item;
+      list-style-type: none;
+      font-weight: bold;
+      p {
+        display: inline;
+      }
+    }
+    dd {
+      display: list-item;
+      list-style-type: none;
+      p {
+        display: inline;
+      }
+    }
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: ($muwu-root-font-size * 1.125);
+  margin: $muwu-root-line-height 0rem;
+}
+
+hr {
+  margin: $muwu-root-line-height 0;
+  border-width: 0;
+}
+
+ol {
+  margin: $muwu-root-line-height;
+  ol, ul {
+    margin: 0rem 1rem;
+  }
+}
+
+p {
+  margin: $muwu-root-line-height 0rem;
+}
+
+pre {
+  font-size: ($muwu-root-font-size * 0.9);
+  margin: $muwu-root-line-height 0;
+  >code {
+    font-size: ($muwu-root-font-size * 0.8);
+    padding: 0rem 0rem;
+  }
+}
+
+q {
+  quotes: '“' '”';
+}
+
+ul {
+  margin: $muwu-root-line-height;
+  ol, ul {
+    margin: 0rem 1rem;
+  }
+}
+
+
+
+
+@media screen {
+  html {
+    body {
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media print {
+  html {
+    body {
+      ol, ul {
+        page-break-inside: avoid;
+      }
+    }
+  }
+}

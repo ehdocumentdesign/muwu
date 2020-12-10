@@ -1,0 +1,27 @@
+html {
+  body {
+    section.text[data-depth] {
+      >* {
+        border: 1px pink solid;
+        >* {
+          border: 1px blue dotted;
+          >* {
+            border: 1px green dashed;
+            >* {
+              border: 1px orange solid;
+              >* {
+                border: 1px purple dotted;
+                >* {
+                  border: 1px brown solid;
+                  * {
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
