@@ -170,9 +170,9 @@ module Muwu
         file_name_haml = file_basename + '.haml'
         file_attempt_md = File.join([file_path, file_name_md].flatten)
         file_attempt_haml = File.join([file_path, file_name_haml].flatten)
-        if File.exists?(file_attempt_md)
+        if File.exist?(file_attempt_md)
           source_filename = file_attempt_md
-        elsif File.exists?(file_attempt_haml)
+        elsif File.exist?(file_attempt_haml)
           source_filename = file_attempt_haml
         else
           source_filename = file_attempt_md

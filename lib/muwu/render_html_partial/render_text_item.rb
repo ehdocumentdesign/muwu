@@ -155,7 +155,7 @@ module Muwu
 
       def source_file_exists
         if @source_filename_absolute
-          File.exists?(@source_filename_absolute)
+          File.exist?(@source_filename_absolute)
         end
       end
 

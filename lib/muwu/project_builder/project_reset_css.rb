@@ -28,11 +28,11 @@ module Muwu
 
 
     def phase_1_verify_or_create_css_folder
-      if Dir.exists?(@project.path_config) == false
+      if Dir.exist?(@project.path_config) == false
         puts "Creating folder #{@project.path_config}"
         FileUtils.mkdir(@project.path_config)
       end
-      if Dir.exists?(@project.path_css) == false
+      if Dir.exist?(@project.path_css) == false
         puts "Creating folder #{@project.path_css}"
         FileUtils.mkdir(@project.path_css)
       end
@@ -40,7 +40,7 @@ module Muwu
 
 
     def phase_2_clear_base_folder
-      if Dir.exists?(@project.path_css_base) == true
+      if Dir.exist?(@project.path_css_base) == true
         puts "Clearing folder #{@project.path_css_base}"
         FileUtils.remove_entry_secure(@project.path_css_base)
       end
@@ -56,7 +56,7 @@ module Muwu
 
 
     def phase_4_verify_or_create_colors_folder
-      if Dir.exists?(@project.path_css_colors) == false
+      if Dir.exist?(@project.path_css_colors) == false
         puts "Creating folder #{@project.path_css_colors}"
         FileUtils.mkdir(@project.path_css_colors)
       end
@@ -82,7 +82,7 @@ module Muwu
 
 
     def phase_7_verify_or_create_extensions_folder
-      if Dir.exists?(@project.path_css_extensions) == false
+      if Dir.exist?(@project.path_css_extensions) == false
         folder_source_gem = File.absolute_path(File.join(Muwu::GEM_HOME_LIB, 'muwu','project_builder','assets','config','css','extensions'))
         folder_destination_project = @project.path_css_extensions
         puts "Creating folder #{@project.path_css_extensions}"

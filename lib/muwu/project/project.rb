@@ -31,7 +31,7 @@ module Muwu
 
 
     def css_manifest_file_does_exist
-      File.exists?(css_manifest_filename) == true
+      File.exist?(css_manifest_filename) == true
     end
 
 
@@ -110,12 +110,12 @@ module Muwu
 
 
     def metadata_file_does_exist
-      File.exists?(metadata_filename) == true
+      File.exist?(metadata_filename) == true
     end
 
 
     def metadata_file_does_not_exist
-      File.exists?(metadata_filename) == false
+      File.exist?(metadata_filename) == false
     end
 
 
@@ -125,12 +125,12 @@ module Muwu
 
 
     def options_file_does_exist
-      File.exists?(options_filename) == true
+      File.exist?(options_filename) == true
     end
 
 
     def options_file_does_not_exist
-      File.exists?(options_filename) == false
+      File.exist?(options_filename) == false
     end
 
 
@@ -140,12 +140,12 @@ module Muwu
 
 
     def outline_file_does_exist
-      File.exists?(outline_filename) == true
+      File.exist?(outline_filename) == true
     end
 
 
     def outline_file_does_not_exist
-      File.exists?(outline_filename) == false
+      File.exist?(outline_filename) == false
     end
 
 
@@ -258,7 +258,7 @@ module Muwu
 
 
     def path_compiled_does_exist
-      Dir.exists?(path_compiled)
+      Dir.exist?(path_compiled)
     end
 
 
