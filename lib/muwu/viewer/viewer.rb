@@ -8,23 +8,30 @@ module Muwu
     def initialize(project)
       document_home = project.manifest.find_document_html_by_index(0)
       if document_home
-        document_home_filepath = File.join(project.path_compiled, document_home.filename)
-        initialize_viewer(document_home_filepath)
+        @document_home_filepath = File.join(project.path_compiled, document_home.filename)
       else
-        puts "No documents in outline to view."
+        raise ProjectExceptionHandler::Fatal.new(ProjectException::ViewerMissingHomeDocument.new)
       end
     end
 
 
-    def initialize_viewer(document_home_filepath)
-      if File.exist?(document_home_filepath)
-        begin
-          system "lynx #{document_home_filepath}", exception: true
-        rescue Errno::ENOENT
-          raise ProjectExceptionHandler::Fatal.new(ProjectException::LynxNotAvailable.new)
-        end
+    public
+
+
+    def view
+      if @document_home_filepath && File.exist?(@document_home_filepath)
+        view_home_document
       else
-        puts "Compiled document not found: #{document_home_filepath}"
+        raise ProjectExceptionHandler::Fatal.new(ProjectException::ViewerMissingHomeDocument.new)
+      end
+    end
+
+
+    def view_home_document
+      begin
+        system "lynx #{@document_home_filepath}", exception: true
+      rescue Errno::ENOENT
+        raise ProjectExceptionHandler::Fatal.new(ProjectException::LynxNotAvailable.new)
       end
     end
 

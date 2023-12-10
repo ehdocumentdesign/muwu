@@ -149,7 +149,7 @@ module Muwu
       if @project.does_not_have_crucial_files
         reply_folder_does_not_have_valid_project
       else
-        Viewer.new(@project)
+        Viewer.new(@project).view
       end
     end
 
