@@ -1,7 +1,7 @@
 module Muwu
 
 
-  VERSION = '3.1.0'
+  VERSION = '3.2.0'
 
   GEM_HOME_LIB = File.absolute_path(File.join(File.dirname(__FILE__)))
   GEM_HOME_LIB_MUWU = File.absolute_path(File.join(GEM_HOME_LIB, 'muwu'))

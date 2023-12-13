@@ -2,8 +2,6 @@
 
 compile markdown files from a human-readable outline
 
-(c) 2020 Eli Harrison
-
 _"Maybe WYSIWYG is not WYW."_
 
 
@@ -35,10 +33,10 @@ Maybe you don't know the page size for which a work will be destined. Maybe ther
 
 ## Installing Muwu
 
-To install Muwu as a gem, use the command:
+To install Muwu as a Ruby Gem, use the command:
 
 ~~~
-gem install muwu --version '3.1.0'
+gem install muwu
 ~~~
 
 
